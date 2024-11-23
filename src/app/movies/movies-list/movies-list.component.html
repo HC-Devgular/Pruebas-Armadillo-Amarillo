@@ -1,0 +1,59 @@
+<div class="header">
+  <h1>Películas</h1>
+  <button class="logout-button" (click)="logout()">Salir</button>
+</div>
+
+<h2>Películas en Cartelera</h2>
+<div class="movie-grid">
+  <div *ngFor="let movie of nowPlaying" class="movie-item">
+    <div class="movie-card" (mouseenter)="showMovieDetails(movie.id)">
+      <div class="movie-front">
+        <img
+          [src]="movie.poster_path ? movie.poster_path : 'https://via.placeholder.com/500x750?text=No+Image'"
+          alt="{{ movie.title }}"
+          loading="lazy"
+          onError="this.src='https://via.placeholder.com/500x750?text=No+Image'"
+        />
+      </div>
+      <div class="movie-back">
+        <h3>{{ movieDetails?.title }}</h3>
+        <p>{{ movieDetails?.description }}</p>
+        <h4>Reparto:</h4>
+        <ul>
+          <li *ngFor="let actor of movieDetails?.cast">
+            {{ actor.name }} as {{ actor.character }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Películas Populares</h2>
+<div class="movie-grid">
+  <div *ngFor="let movie of popular" class="movie-item">
+    <div class="movie-card" (mouseenter)="showMovieDetails(movie.id)">
+      <div class="movie-front">
+        <img
+          [src]="movie.poster_path ? movie.poster_path : 'https://via.placeholder.com/500x750?text=No+Image'"
+          alt="{{ movie.title }}"
+          loading="lazy"
+          onError="this.src='https://via.placeholder.com/500x750?text=No+Image'"
+        />
+      </div>
+      <div class="movie-back">
+        <h3>{{ movieDetails?.title }}</h3>
+        <p>{{ movieDetails?.description }}</p>
+        <h4>Reparto:</h4>
+        <ul>
+          <li *ngFor="let actor of movieDetails?.cast">
+            {{ actor.name }} as {{ actor.character }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Botón de sincronización -->
+<button class="sync-button" (click)="syncData()">Sincronizar Datos</button>
