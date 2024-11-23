@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #000000; /* Fondo negro */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.05em;
+  height: 100vh; /* Aseguramos que el fondo cubra toda la altura de la ventana */
+}

@@ -1,0 +1,161 @@
+/* Estilos para la cabecera */
+/* Estilos para la cabecera */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  background-color: #ff4e00; /* Rojo similar a Netflix */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #e44e00; /* Rojo más oscuro */
+}
+
+/* Estilos para la rejilla de películas */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 6 columnas */
+  gap: 16px;  /* Espacio entre las imágenes */
+  margin-top: 20px;
+}
+
+.movie-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar un efecto de profundidad */
+  background-color: #000; /* Fondo negro */
+}
+
+.movie-item img {
+  width: 100%;  /* Asegura que la imagen ocupe todo el contenedor */
+  height: auto;
+  object-fit: cover;  /* Asegura que la imagen cubra el área sin distorsionarse */
+  border-radius: 8px;
+}
+
+/* Estilo para el botón de detalles de película */
+.movie-details-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4e00;  /* Rojo similar a Netflix */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.movie-details-btn:hover {
+  background-color: #e44e00; /* Rojo más oscuro */
+}
+
+/* Estilo para el botón de sincronización */
+.sync-button {
+  padding: 10px 20px;
+  background-color: #ff4e00; /* Rojo similar a Netflix */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sync-button:hover {
+  background-color: #e44e00; /* Rojo más oscuro */
+}
+
+
+/* Rejilla de películas */
+.movie-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Contenedor de cada película */
+.movie-item {
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+
+/* Contenedor para girar la tarjeta */
+.movie-card {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px; /* Profundidad para el giro */
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.6s;  /* Añadimos una transición suave */
+}
+
+/* Parte frontal de la tarjeta (Imagen) */
+.movie-front,
+.movie-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;  /* Oculta la parte trasera cuando está girada */
+  border-radius: 8px;
+  transition: transform 0.6s;  /* Añade una transición suave */
+}
+
+/* Estilo de la parte frontal (imagen de la película) */
+.movie-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ajuste de la imagen */
+  border-radius: 8px;
+}
+
+/* Estilo de la parte trasera (información de la película) */
+.movie-back {
+  background-color: #000000;
+  padding: 10px;
+  transform: rotateY(180deg);  /* Gira la parte trasera */
+}
+
+/* Mostrar la parte posterior cuando se pasa el ratón */
+.movie-card:hover .movie-front {
+  transform: rotateY(180deg); /* Gira la parte frontal */
+}
+
+.movie-card:hover .movie-back {
+  transform: rotateY(0deg); /* Muestra la parte trasera */
+}
+
+/* Botón de sincronización */
+.sync-button {
+  padding: 10px 20px;
+  background-color: #ff4e00;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sync-button:hover {
+  background-color: #e44e00;
+}
