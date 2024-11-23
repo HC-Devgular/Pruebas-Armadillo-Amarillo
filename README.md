@@ -1,59 +1,20 @@
-# PruebasArmadilloAmarillo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
+NOMBRE COMPLETO : HUBERT CHIM MOSIEJ 
 
-## Development server
+RESPUESTA A LAS PREGUNTAS:
+Para implementar paginación:
+* Frontend: Añadir un control de paginación (botones de "Siguiente", "Anterior") que pase el número de página al backend. En Angular, se podría usar un servicio que realice las solicitudes API con un parámetro page, actualizando la lista de películas según el número de página seleccionado.
+* Backend: Al recibir el parámetro page, el backend puede hacer una consulta a la base de datos con un offsetbasado en el número de página. Por ejemplo, en SQL:
+SELECT * FROM movies LIMIT 20 OFFSET (page - 1) * 20;
+Esto devolvería 20 películas por página.
 
-To start a local development server, run:
+Si tuviera que eliminar películas de un array de 7 millones de elementos en Angular, lo haría de la siguiente manera:
+1. Usar filter(): Primero, utilizaría el método filter() de JavaScript para filtrar las películas según el valor de vote_average. 
+2. Procesamiento paralelo con Web Workers: Para mejorar el rendimiento, aprovecharía Web Workers para procesar los datos en segundo plano sin bloquear la interfaz de usuario, haciendo que el filtrado de datos sea más rápido y eficiente.
+3. Optimización de estructuras de datos: Si la eficiencia es crítica, consideraría utilizar una estructura de datos optimizada como un árbol binario para realizar búsquedas rápidas y filtrar de manera más eficiente las películas que no superen el umbral de vote_average.
 
-```bash
-ng serve
-```
+LIBRERIAS Y COMPONENTES DE TERCEROS
+FormsModule: Para manejar formularios reactivos.
+CommonModule: Para usar directivas comunes como ngFor y ngIf.
+HttpClientModule: Para realizar solicitudes HTTP.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
