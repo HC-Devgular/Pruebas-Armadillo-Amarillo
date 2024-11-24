@@ -1,115 +1,113 @@
-/* login.component.css */
-
-*,
-*:before,
-*:after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 /* Fondo del cuerpo de la página */
-body {
-    background-color: #000000; /* Fondo negro */
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.05em;
-    height: 100vh;  /* Asegura que el fondo cubra toda la altura de la pantalla */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.background {
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
+
+
+.contenido {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://yourspanishguide.com/wp-content/uploads/2021/02/dUyCkp.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.background .shape {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
+nav .logo {
+  position: relative;
+  display: flex;
+  padding-top: 25px;
+  padding-left: 3%;
+  width: 210px;
+  cursor: pointer;
+  max-width: 500px;
 }
 
-.shape:first-child {
-    background: linear-gradient(#1845ad, #23a2f6);
-    left: -80px;
-    top: -80px;
+.caja {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  width: 40%;
+  max-width: 600px;
+  border-radius: 3px;
+  padding: 50px 70px;
+  text-align: center;
 }
 
-.shape:last-child {
-    background: linear-gradient(to right, #ff512f, #f09819);
-    right: -30px;
-    bottom: -80px;
+.caja h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
-form {
-    height: 600px; /* Aumentamos la altura para ajustarse al contenido */
-    width: 400px;
-    background-color: rgba(255, 255, 255, 0.13);
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    padding: 50px 35px;
+.caja .form input {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: white;
 }
 
-form * {
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
+.caja button {
+  border: none;
+  padding: 15px 35%;
+  margin-top: 30px;
+  background-color: #e50914;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-form h3 {
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
+.caja button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
 }
 
-label {
-    display: block;
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: 500;
+.error {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-input {
-    display: block;
-    height: 50px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.07);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #b3b3b3;
+  margin: 10px 0px;
 }
 
-::placeholder {
-    color: #e5e5e5;
+.checkbox label {
+  margin-left: 3px;
 }
 
-button {
-    margin-top: 50px;
-    width: 100%;
-    background-color: #ffffff;
-    color: #080710 !important;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
+.caja .subscripcion {
+  color: gray;
+  font-size: 14px;
+  margin-top: 20px;
 }
 
+.caja .subscripcion span {
+  color: white;
+  font-weight: bold;
+}
+
+.caja .subscripcion a {
+  color: #0071eb;
+  text-decoration: none;
+}
+
+.caja .subscripcion a:hover {
+  text-decoration: underline;
+}

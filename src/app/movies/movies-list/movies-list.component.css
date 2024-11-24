@@ -1,13 +1,24 @@
 /* Estilos para la cabecera */
-/* Estilos para la cabecera */
 .header {
+  background: linear-gradient(to bottom, #141414,  rgba(0, 0, 0, 0));
+  padding: 10px 20px;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
-  color: #fff;
-  padding: 10px 20px;
 }
+.header img {
+  max-width: 120px;
+}
+.logout-button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
 
 .header h1 {
   margin: 0;
@@ -15,7 +26,7 @@
 
 .logout-button {
   padding: 10px 20px;
-  background-color: #ff4e00; /* Rojo similar a Netflix */
+  background-color: #e50914; /* Rojo similar a Netflix */
   color: white;
   font-size: 16px;
   border: none;
@@ -36,12 +47,19 @@
 }
 
 .movie-item {
-  position: relative;
+  border-radius: 10px;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar un efecto de profundidad */
-  background-color: #000; /* Fondo negro */
+  position: relative;
+  background: #333;
 }
+.movie-front img {
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.movie-front:hover img {
+  transform: scale(1.05);
+}
+
 
 .movie-item img {
   width: 100%;  /* Asegura que la imagen ocupe todo el contenedor */
@@ -56,7 +74,7 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ff4e00;  /* Rojo similar a Netflix */
+  background-color: #e50914;  /* Rojo similar a Netflix */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -65,24 +83,26 @@
 }
 
 .movie-details-btn:hover {
-  background-color: #e44e00; /* Rojo más oscuro */
+  background-color: #e50914; /* Rojo más oscuro */
 }
 
 /* Estilo para el botón de sincronización */
 .sync-button {
+  display: block;
+  margin: 20px auto; /* Centra el botón horizontalmente */
   padding: 10px 20px;
-  background-color: #ff4e00; /* Rojo similar a Netflix */
+  background-color: #e50914;
   color: white;
   font-size: 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 20px;
 }
 
 .sync-button:hover {
-  background-color: #e44e00; /* Rojo más oscuro */
+  background-color: #b00710;
 }
+
 
 
 /* Rejilla de películas */
@@ -147,7 +167,7 @@
 /* Botón de sincronización */
 .sync-button {
   padding: 10px 20px;
-  background-color: #ff4e00;
+  background-color: #e50914;
   color: white;
   font-size: 16px;
   border: none;
@@ -156,6 +176,52 @@
   margin-top: 20px;
 }
 
-.sync-button:hover {
-  background-color: #e44e00;
+/* Estilo para el banner principal */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  overflow: hidden;
 }
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.2); /* Aumenta el contraste */
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen */
+  color: white;
+  text-align: center;
+}
+
+.banner-overlay h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.red-button {
+  background-color: #e50914;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px;
+  cursor: pointer;
+}
+

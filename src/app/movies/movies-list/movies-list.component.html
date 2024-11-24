@@ -2,6 +2,19 @@
   <h1>Películas</h1>
   <button class="logout-button" (click)="logout()">Salir</button>
 </div>
+<div class="banner">
+  <img
+    class="banner-image"
+    src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2024/10/promocion-venom-ultimo-baile-sube-nivel-venom-rapero-nuevo-poster-pelicula-4245696.jpg?tf=1200x"
+    alt="Películas en tendencia"
+  />
+  <div class="banner-overlay">
+    <h2>Películas en Tendencia</h2>
+
+  </div>
+</div>
+<!-- Botón de sincronización -->
+<button class="sync-button" (click)="syncData()">Sincronizar Datos</button>
 
 <h2>Películas en Cartelera</h2>
 <div class="movie-grid">
@@ -55,5 +68,3 @@
   </div>
 </div>
 
-<!-- Botón de sincronización -->
-<button class="sync-button" (click)="syncData()">Sincronizar Datos</button>

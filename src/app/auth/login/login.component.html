@@ -1,42 +1,62 @@
-<div class="background">
-  <div class="shape"></div>
-  <div class="shape"></div>
+<div class="contenido">
+
+
+  <div class="caja">
+    <h2>Iniciar sesión</h2>
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm" class="form">
+      <!-- Email -->
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="email"
+        name="email"
+        required
+        placeholder="Correo electrónico o número de teléfono"
+        #emailField="ngModel"
+        email
+      />
+      <div *ngIf="emailField.invalid && emailField.touched" class="error">
+        El correo es obligatorio y debe ser válido.
+      </div>
+
+      <!-- Contraseña -->
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+        placeholder="Contraseña"
+        #passwordField="ngModel"
+      />
+      <div *ngIf="passwordField.invalid && passwordField.touched" class="error">
+        La contraseña es obligatoria.
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid">Iniciar sesión</button>
+    </form>
+    <div class="checkbox">
+      <div class="recordar">
+        <input type="checkbox" id="checkbox1" />
+        <label for="remember">Recuérdame</label>
+      </div>
+      <div>
+        <p>¿Necesitas ayuda?</p>
+      </div>
+    </div>
+    <div class="subscripcion">
+      <p>¿Todavía sin Armadillo? <span>Subscríbete ya.</span></p>
+      <p>
+        Esta página utiliza Google reCAPTCHA para garantizar que no eres un
+        robot. <br /><br />
+        La información recopilada por Google reCAPTCHA está sujeta a la
+        <a href="">Política de Privacidad</a>
+        y las
+        <a href="">Condiciones de servicio</a>
+        de Google, y se utiliza para proporcionar, mantener y mejorar el
+        servicio de reCAPTCHA, así como para fines generales de seguridad
+        (Google no la utiliza para publicidad personalizada).
+      </p>
+    </div>
+  </div>
 </div>
-
-<form (ngSubmit)="onLogin()" #loginForm="ngForm">
-  <h3>Iniciar sesión</h3>
-
-  <!-- Email -->
-  <label for="email">Email</label>
-  <input
-    type="email"
-    id="email"
-    [(ngModel)]="email"
-    name="email"
-    required
-    placeholder="Email"
-    #emailField="ngModel"
-    email>
-  <div *ngIf="emailField.invalid && emailField.touched" class="error">
-    El email es obligatorio y debe ser válido.
-  </div>
-
-  <!-- Contraseña -->
-  <label for="password">Contraseña</label>
-  <input
-    type="password"
-    id="password"
-    [(ngModel)]="password"
-    name="password"
-    required
-    placeholder="Contraseña"
-    #passwordField="ngModel">
-  <div *ngIf="passwordField.invalid && passwordField.touched" class="error">
-    La contraseña es obligatoria.
-  </div>
-
-  <button type="submit" [disabled]="loginForm.invalid">Iniciar sesión</button>
-</form>
-
-
-

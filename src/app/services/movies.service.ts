@@ -47,7 +47,27 @@ export class MoviesService {
           { name: 'Ryan Reynolds', character: 'Red Suit Man' },
           { name: 'Emma Stone', character: 'Partner' }
         ]
-      }
+      },
+      {
+        id: 5,  // Asignamos un ID único para cada película
+        title: 'Gladiator 2',
+        poster_path: 'https://pics.filmaffinity.com/Gladiator_II-152686913-large.jpg',  // Imagen disponible
+        description: 'La continuación épica de Gladiator con nuevas batallas y aventura.',
+        cast: [
+          { name: 'Russell Crowe', character: 'Maximus Decimus Meridius' },
+          { name: 'Joaquin Phoenix', character: 'Commodus' }
+        ]
+      },
+      {
+        id: 6,  // Asignamos un ID único
+        title: 'Robot salvaje',
+        poster_path: 'https://movies.universalpictures.com/media/thewildrobot-poster-66686a8d0fd04-1.jpg',
+        description: 'Una historia futurista donde los robots cobran vida.',
+        cast: [
+          { name: 'Will Smith', character: 'Detective Del Spooner' },
+          { name: 'Eva Mendes', character: 'Susan Calvin' }
+        ]
+      },
     ]
   };
 
