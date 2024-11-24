@@ -5,7 +5,7 @@ import { MoviesListComponent } from './movies/movies-list/movies-list.component'
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/movies', pathMatch: 'full' },
+  { path: '', redirectTo: '/register', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'movies', component: MoviesListComponent },
